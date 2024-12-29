@@ -12,8 +12,11 @@ For this purpouse following CBF was defined for each obstacle:
 ![cbf_obstacle](https://latex.codecogs.com/svg.image?h_%7Bi%7D(x)=(x_%7B1%7D-x_%7B1%7D%5E%7Bo%7D)%5E2&plus;(x_%7B2%7D-x_%7B2%7D%5E%7Bo%7D)%5E2&plus;x_%7B3%7D%5E%7B2%7D-(R&plus;r)%5E2%20)
 
 ## Implementation
+Top model:
 ![model](figures/model.png)
 
+Controller model:
+![controller_model](figures/controller_model.png)
 
 ## Results
 
