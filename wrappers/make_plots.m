@@ -2,7 +2,6 @@
 figure;
 hold on;
 grid on;
-axis equal;
 xlabel("x [m]");
 ylabel("y [m]");
 legend("show");
@@ -21,6 +20,9 @@ x_ref_pose = squeeze(X_ref.Values.Data);
 
 plot(x_pose(1,:), x_pose(2,:), "LineWidth", 2, "DisplayName", "Trajectory");
 plot(x_ref_pose(:, 1), x_ref_pose(:, 3), ":", "LineWidth", 2, "DisplayName", "Trajectory Reference");
+
+is_overwritten = out.logsout.getElement("is_overwritten").Values.Data;
+plot(x_pose(1,is_overwritten), x_pose(2,is_overwritten), ".", "LineWidth", 1, "DisplayName", "Modified Trajectory");
 
 %% Plot trajectory signals
 figure;
@@ -73,8 +75,8 @@ h = out.logsout.getElement("h");
 hp = out.logsout.getElement("hp");
 is_overwritten = out.logsout.getElement("is_overwritten");
 
-plot(h.Values.Time, h.Values.Data, "LineWidth", 2, "DisplayName", "h(x,u)");
-plot(hp.Values.Time, hp.Values.Data, "LineWidth", 2, "DisplayName", "h'(x,u)");
+plot(h.Values.Time, squeeze(h.Values.Data), "LineWidth", 2, "DisplayName", "h(x,u)");
+plot(hp.Values.Time, squeeze(hp.Values.Data), "LineWidth", 2, "DisplayName", "h'(x,u)");
 plot(is_overwritten.Values.Time, is_overwritten.Values.Data, "LineWidth", 2, ...
     "DisplayName", "Is Overwritten");
 

@@ -17,3 +17,5 @@ For this purpouse following CBF was defined for each obstacle:
 
 ## Results
 ![trajectory](figures/two_obstacles.png)
+
+![u](figures/u.png)
