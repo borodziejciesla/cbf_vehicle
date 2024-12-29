@@ -87,6 +87,10 @@ u = out.logsout.getElement("u");
 u_value = squeeze(u.Values.Data);
 u_time = u.Values.Time;
 
+u_n = out.logsout.getElement("u_n");
+u_n_value = squeeze(u_n.Values.Data);
+u_n_time = u_n.Values.Time;
+
 subplot(2, 1, 1);
 hold on;
 grid on;
@@ -94,6 +98,7 @@ xlabel("Time [s]");
 ylabel("u_{v} [m/s]");
 legend("show");
 plot(u_time, u_value(1, :), "LineWidth", 2, "DisplayName", "u_{v}");
+plot(u_n_time, u_n_value(1, :), "--", "LineWidth", 2, "DisplayName", "u_{n,v}");
 plot(is_overwritten.Values.Time, is_overwritten.Values.Data, ":", "LineWidth", 2, ...
     "DisplayName", "Is Overwritten");
 
@@ -104,5 +109,6 @@ xlabel("Time [s]");
 ylabel("u_{\omega} [m/s]");
 legend("show");
 plot(u_time, u_value(2, :), "LineWidth", 2, "DisplayName", "u_{\omega}");
+plot(u_n_time, u_n_value(2, :), "--", "LineWidth", 2, "DisplayName", "u_{\omega}");
 plot(is_overwritten.Values.Time, is_overwritten.Values.Data, ":", "LineWidth", 2, ...
     "DisplayName", "Is Overwritten");

@@ -16,6 +16,11 @@ For this purpouse following CBF was defined for each obstacle:
 
 
 ## Results
-![trajectory](figures/two_obstacles.png)
 
+### Trajectory Tracking
+![trajectory](figures/two_obstacles.png)
 ![u](figures/u.png)
+
+### Pure Pursuit
+![trajectory_pp](figures/two_obstacles_pp.png)
+![u_pp](figures/u_pp.png)
