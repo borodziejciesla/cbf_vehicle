@@ -21,8 +21,14 @@ Controller model:
 ## Results
 
 ### Trajectory Tracking
+
+#### Two Obstacles
 ![trajectory](figures/two_obstacles.png)
 ![u](figures/u.png)
+
+#### Four Obstacles
+![four_obstacles_trajectory](figures/four_obstacles.png)
+![four_obstacles_u](figures/four_obstacles_u.png)
 
 ### Pure Pursuit
 ![trajectory_pp](figures/two_obstacles_pp.png)

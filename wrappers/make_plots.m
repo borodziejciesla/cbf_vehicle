@@ -12,6 +12,12 @@ plot(p, "DisplayName", "Obstacle");
 p = nsidedpoly(1000, 'Center', [20,0.5], 'Radius', 1);
 plot(p, "DisplayName", "Obstacle");
 
+p = nsidedpoly(1000, 'Center', [30,-1], 'Radius', 1);
+plot(p, "DisplayName", "Obstacle");
+
+p = nsidedpoly(1000, 'Center', [29,2], 'Radius', 1);
+plot(p, "DisplayName", "Obstacle");
+
 X = out.logsout.getElement("X");
 x_pose = squeeze(X.Values.Position.Data);
 
